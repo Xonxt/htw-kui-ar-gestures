@@ -36,8 +36,8 @@ std::string generateFileName(const char* ext) {
 
 int main() {	
 	cv::VideoCapture videoCapture;
-
-	if (!videoCapture.open(1)) {
+	
+	if (!videoCapture.open(0)) {
 		std::cerr << "Failed when opening video capture device!" << std::endl;
 		return -1;
 	}
@@ -93,6 +93,13 @@ int main() {
 
 		if (char(c) == 27)
 			break;		
+		else {
+			switch (char(c)) {
+			case 'm':
+				std::cout << "Toggle showing mask!" << std::endl;
+				frameProcessor.toggleShowMask();
+			}
+		}
 	}
 
 	outputVideo.release();

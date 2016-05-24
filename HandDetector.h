@@ -8,7 +8,7 @@
 #define RESIZE_HEIGHT 240
 #define RESIZE_WIDTH  320
 
-#define DEFAULT_DETECTOR "Detectors/hogcascade_righthand_v3.0.xml"
+#define DEFAULT_DETECTOR "Detectors\\hogcascade_righthand_v3.0.xml"
 
 class HandDetector {
 private:
