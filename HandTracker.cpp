@@ -122,7 +122,7 @@ bool HandTracker::initialize() {
 
 	somethingIsTracked = false;
 
-	skinSegmMethod = SKIN_SEGMENT_YCRCB;
+	skinSegmMethod = SKIN_SEGMENT_HSV;
 
 	result = true;
 

@@ -164,6 +164,11 @@ void FrameProcessor::processFrame(cv::Mat & frame) {
 	// detect and track the hands in the frame
 	
 	detectHands();
+
+	if (cameraParameters.showMask) {
+		handTracker.getSkinMask(frame);
+		return;
+	}
 	
 
 	// draw the hands on the image
